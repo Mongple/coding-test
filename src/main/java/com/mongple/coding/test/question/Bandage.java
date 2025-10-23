@@ -1,4 +1,4 @@
-package com.mongple.coding.test;
+package com.mongple.coding.test.question;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -6,9 +6,10 @@ import java.util.LinkedHashMap;
 public class Bandage {
 
     /**
-     * Programmers. [PCCP 기출문제] 1번 / 붕대 감기 <a href="https://school.programmers.co.kr/learn/courses/30/lessons/250137" />
+     * Programmers. [PCCP 기출문제] 1번 / 붕대 감기 
+     * URL : <a href="https://school.programmers.co.kr/learn/courses/30/lessons/250137" />
      */
-    void main() {
+    public static void main(String[] args) {
         int[] bandage = {5, 1, 5};
         int health = 30;
         int[][] attacks = {{2, 10}, {9, 15}, {10, 5}, {11, 5}};
@@ -60,7 +61,7 @@ public class Bandage {
         return health;
     }
 
-    public int solution2(int[] bandage, int health, int[][] attacks) {
+    public static int solution2(int[] bandage, int health, int[][] attacks) {
         int cnt = bandage[0]; // 추가 체력 기준
         int now = health; // 현재 체력
         int std = 0; // 마지막으로 공격당한 시간

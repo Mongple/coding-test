@@ -1,10 +1,10 @@
-package com.mongple.coding.test;
+package com.mongple.coding.test.question;
 
 import java.time.Duration;
 
 public class VideoPlayer {
-    
-    void main() {
+
+    public static void main(String[] args) {
 //        String videoLen = "34:33";
 //        String pos = "13:00";
 //        String opStart = "00:55";
@@ -27,6 +27,7 @@ public class VideoPlayer {
 
     /**
      * # Programmers. 동영상 플레이어
+     * URL : <a href="https://school.programmers.co.kr/learn/courses/30/lessons/340213" />
      * 
      * - [문제 설명]
      * 당신은 동영상 재생기를 만들고 있습니다. 당신의 동영상 재생기는 10초 전으로 이동, 10초 후로 이동, 오프닝 건너뛰기 3가지 기능을 지원합니다. 각 기능이 수행하는 작업은 다음과 같습니다.
@@ -58,7 +59,7 @@ public class VideoPlayer {
     
     
     
-    public String solution(String videoLen, String pos, String opStart, String opEnd, String[] commands) {
+    public static String solution(String videoLen, String pos, String opStart, String opEnd, String[] commands) {
         Duration posDuration = toDuration(pos);
         Duration videoStartDuration = toDuration("00:00");
         Duration videoLenDuration = toDuration(videoLen);
@@ -98,17 +99,17 @@ public class VideoPlayer {
         return toStringWithAnswerFormat(posDuration);
     }
 
-    private boolean isInOpening(Duration posDuration, Duration opStartDuration, Duration opEndDuration) {
+    private static boolean isInOpening(Duration posDuration, Duration opStartDuration, Duration opEndDuration) {
         return opStartDuration.compareTo(posDuration) <= 0 && opEndDuration.compareTo(posDuration) >= 0;
     }
 
-    private Duration toDuration(String data) {
+    private static Duration toDuration(String data) {
         String[] dataArr = data.split(":");
         return Duration.ofMinutes(Integer.parseInt(dataArr[0]))
                 .plusSeconds(Integer.parseInt(dataArr[1]));
     }
 
-    private String toStringWithAnswerFormat(Duration duration) {
+    private static String toStringWithAnswerFormat(Duration duration) {
         return String.format("%02d", duration.toMinutesPart()) 
                 + ":" 
                 + String.format("%02d", duration.toSecondsPart());

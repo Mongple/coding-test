@@ -1,16 +1,17 @@
-package com.mongple.coding.test;
+package com.mongple.coding.test.question;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class BoxRetriever {
 
-    void main() {
+    public static void main(String[] args) {
         System.out.println("solution : " + solution(22, 6, 8));
     }
 
     /*
         Programmers. 택배 상자 꺼내기
+        URL : <a href="https://school.programmers.co.kr/learn/courses/30/lessons/389478" />
         ---------------------------
 
         [문제 설명]
@@ -39,7 +40,7 @@ public class BoxRetriever {
         1 <= W <= 10
         1 <= num <= N
     */
-    public int solution(int n, int w, int num) {
+    public static int solution(int n, int w, int num) {
         int answer = 0;
 
         List<List<Integer>> boxRows = new ArrayList<>();

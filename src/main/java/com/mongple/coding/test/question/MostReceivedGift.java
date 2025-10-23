@@ -1,4 +1,4 @@
-package com.mongple.coding.test;
+package com.mongple.coding.test.question;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -9,7 +9,7 @@ import java.util.stream.Collectors;
 
 public class MostReceivedGift {
 
-    void main() {
+    public static void main(String[] args) {
 //        String[] friends = {"muzi", "ryan", "frodo", "neo"};
 //        String[] gifts = {"muzi frodo", "muzi frodo", "ryan muzi", "ryan muzi", "ryan muzi", "frodo muzi", "frodo ryan", "neo muzi"};
 
@@ -25,6 +25,7 @@ public class MostReceivedGift {
 
     /*
         Programmers. 가장 많이 받은 선물
+        URL : <a href="https://school.programmers.co.kr/learn/courses/30/lessons/258712" />
         ---------------------------
 
         [문제 설명]
@@ -50,7 +51,7 @@ public class MostReceivedGift {
         ["joy", "brad", "alessandro", "conan", "david"] | ["alessandro brad", "alessandro joy", "alessandro conan", "david alessandro", "alessandro david"]           | 4
         ["a", "b", "c"]                                 | ["a b", "b a", "c a", "a c", "a c", "c a"]                                                                  | 0
     */
-    int solution(String[] friends, String[] gifts) {
+    public static int solution(String[] friends, String[] gifts) {
         
         List<Person> people = Arrays.stream(friends)
                 .map(x -> new Person(x, friends))
@@ -111,7 +112,7 @@ public class MostReceivedGift {
         return answer;
     }
     
-    public int getGiftCount(Map<String, Integer> map, String targetName) {
+    public static int getGiftCount(Map<String, Integer> map, String targetName) {
         AtomicInteger giftCount = new AtomicInteger(0);
         
         map.keySet().forEach(personName -> {
@@ -123,7 +124,7 @@ public class MostReceivedGift {
         return giftCount.get();
     }
     
-    class Person {
+    public static class Person {
         private String name;
         private Map<String, Integer> senderMap = new HashMap<>();   // 누가 나에게 몇개의 선물을 주었는지 정보
         private Map<String, Integer> receiverMap = new HashMap<>();  // 내가 누구에게 몇개의 선물을 주었는지 정보

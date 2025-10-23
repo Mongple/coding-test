@@ -1,10 +1,10 @@
-package com.mongple.coding.test;
+package com.mongple.coding.test.question;
 
 import java.util.*;
 
 public class ReportResultSendMail {
 
-    void main() {
+    public static void main(String[] args) {
 //        String[] idList = {"muzi", "frodo", "apeach", "neo"};
 //        String[] report = {"muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"};
 //        int k = 2;
@@ -18,6 +18,7 @@ public class ReportResultSendMail {
 
     /*
         Programmers. 신고 결과 받기
+        URL : <a href="https://school.programmers.co.kr/learn/courses/30/lessons/92334" />
         ---------------------------
 
         [문제 설명]
@@ -57,7 +58,7 @@ public class ReportResultSendMail {
         
         [입출력 예제]
     */
-    public int[] solution(String[] idList, String[] report, int k) {
+    public static int[] solution(String[] idList, String[] report, int k) {
         int[] answer = new int[idList.length];
 
         List<User> userList = new ArrayList<>();
@@ -99,7 +100,7 @@ public class ReportResultSendMail {
         return answer;
     }
 
-    class User {
+    public static class User {
         private String id;
         private Set<String> reportTargetSet = new HashSet<>();
 
