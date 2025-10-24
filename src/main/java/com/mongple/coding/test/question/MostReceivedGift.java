@@ -10,14 +10,14 @@ import java.util.stream.Collectors;
 public class MostReceivedGift {
 
     void main() {
-//        String[] friends = {"muzi", "ryan", "frodo", "neo"};
-//        String[] gifts = {"muzi frodo", "muzi frodo", "ryan muzi", "ryan muzi", "ryan muzi", "frodo muzi", "frodo ryan", "neo muzi"};
+        // String[] friends = {"muzi", "ryan", "frodo", "neo"};
+        // String[] gifts = {"muzi frodo", "muzi frodo", "ryan muzi", "ryan muzi", "ryan muzi", "frodo muzi", "frodo ryan", "neo muzi"};
 
         String[] friends = {"joy", "brad", "alessandro", "conan", "david"};
         String[] gifts = {"alessandro brad", "alessandro joy", "alessandro conan", "david alessandro", "alessandro david"};
-//
-//        String[] friends = {"a", "b", "c"};
-//        String[] gifts = {"a b", "b a", "c a", "a c", "a c", "c a"};
+
+        // String[] friends = {"a", "b", "c"};
+        // String[] gifts = {"a b", "b a", "c a", "a c", "a c", "c a"};
         
         
         System.out.println("solution : " + solution(friends, gifts));
@@ -124,7 +124,7 @@ public class MostReceivedGift {
         return giftCount.get();
     }
     
-    public class Person {
+    public static class Person {
         private String name;
         private Map<String, Integer> senderMap = new HashMap<>();   // 누가 나에게 몇개의 선물을 주었는지 정보
         private Map<String, Integer> receiverMap = new HashMap<>();  // 내가 누구에게 몇개의 선물을 주었는지 정보

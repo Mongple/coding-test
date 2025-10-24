@@ -76,7 +76,7 @@ public class BoxRetriever {
                     answer++;
                 }
             }
-        };
+        }
 
         return answer;
     }
