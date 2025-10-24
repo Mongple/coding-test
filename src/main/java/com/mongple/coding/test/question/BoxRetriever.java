@@ -5,7 +5,7 @@ import java.util.List;
 
 public class BoxRetriever {
 
-    public static void main(String[] args) {
+    void main() {
         System.out.println("solution : " + solution(22, 6, 8));
     }
 
@@ -40,7 +40,7 @@ public class BoxRetriever {
         1 <= W <= 10
         1 <= num <= N
     */
-    public static int solution(int n, int w, int num) {
+    public int solution(int n, int w, int num) {
         int answer = 0;
 
         List<List<Integer>> boxRows = new ArrayList<>();

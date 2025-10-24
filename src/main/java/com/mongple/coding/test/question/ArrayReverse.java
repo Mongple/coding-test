@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class ArrayReverse {
     
-    public static void main(String[] args) {
+    void main() {
         System.out.println("solution : " + Arrays.toString(solution(new int[]{1, 0, 1, 1, 1, 3, 5})));
     }
 
@@ -24,7 +24,7 @@ public class ArrayReverse {
      * 
      */
 
-    public static int[] solution(int[] numList) {
+    public int[] solution(int[] numList) {
         
         List<Integer> list = Arrays.stream(numList).boxed().collect(Collectors.toList());
         

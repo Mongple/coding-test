@@ -4,7 +4,7 @@ import java.util.*;
 
 public class ReportResultSendMail {
 
-    public static void main(String[] args) {
+    void main() {
 //        String[] idList = {"muzi", "frodo", "apeach", "neo"};
 //        String[] report = {"muzi frodo","apeach frodo","frodo neo","muzi neo","apeach muzi"};
 //        int k = 2;
@@ -58,7 +58,7 @@ public class ReportResultSendMail {
         
         [입출력 예제]
     */
-    public static int[] solution(String[] idList, String[] report, int k) {
+    public int[] solution(String[] idList, String[] report, int k) {
         int[] answer = new int[idList.length];
 
         List<User> userList = new ArrayList<>();
@@ -100,7 +100,7 @@ public class ReportResultSendMail {
         return answer;
     }
 
-    public static class User {
+    public class User {
         private String id;
         private Set<String> reportTargetSet = new HashSet<>();
 

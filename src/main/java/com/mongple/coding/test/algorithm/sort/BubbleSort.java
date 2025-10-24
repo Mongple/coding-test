@@ -4,14 +4,14 @@ import java.util.Arrays;
 
 public class BubbleSort {
 
-    public static void main(String[] args) {
+    void main() {
         System.out.println("solution : " + Arrays.toString(solution(new int[]{8, 5, 7, 2, 4})));
     }
 
     /**
      * 두개의 데이터를 비교하여 크기에 따라 위치를 서로 교하는 정렬 방식
      */
-    public static int[] solution(int[] data) {
+    public int[] solution(int[] data) {
         int compareCount = 0;
         
         for (int i = 0; i < data.length - 1; i++) {

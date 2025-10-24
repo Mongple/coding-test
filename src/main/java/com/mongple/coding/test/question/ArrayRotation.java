@@ -4,7 +4,7 @@ import java.util.Arrays;
 
 public class ArrayRotation {
     
-    public static void main(String[] args) {
+    void main() {
         System.out.println("solution : " + Arrays.toString(solution(new int[]{4, 455, 6, 4, -1, 45, 6}, "left")));
     }
 
@@ -21,7 +21,7 @@ public class ArrayRotation {
      * 
      */
 
-    public static int[] solution(int[] numbers, String direction) {
+    public int[] solution(int[] numbers, String direction) {
         int[] answer = new int[numbers.length];
 
         if ("right".equals(direction)) {

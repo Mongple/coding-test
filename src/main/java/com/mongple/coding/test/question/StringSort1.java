@@ -4,8 +4,8 @@ import java.util.Arrays;
 
 public class StringSort1 {
     
-    public static void main(String[] args) {
-        System.out.println("solution : " + solution("hi12392"));
+    void main() {
+        System.out.println("solution : " + Arrays.toString(solution("hi12392")));
     }
 
     /**
@@ -22,7 +22,7 @@ public class StringSort1 {
      * 
      */
     
-    public static int[] solution(String myString) {
+    public int[] solution(String myString) {
 
         String[] strArr = myString.split("");
 
@@ -33,7 +33,7 @@ public class StringSort1 {
                 .toArray();
     }
 
-    public static boolean isNumber(String str) {
+    public boolean isNumber(String str) {
         try {
             Integer.parseInt(str);
         } catch(Exception ignore) {
@@ -43,7 +43,7 @@ public class StringSort1 {
         return true;
     }
 
-    public static int[] solution2(String myString) {
+    public int[] solution2(String myString) {
 
         String[] strArr = myString.replaceAll("[A-Z|a-z]", "").split("");
 

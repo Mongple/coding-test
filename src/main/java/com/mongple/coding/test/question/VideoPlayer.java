@@ -4,7 +4,7 @@ import java.time.Duration;
 
 public class VideoPlayer {
 
-    public static void main(String[] args) {
+    void main() {
 //        String videoLen = "34:33";
 //        String pos = "13:00";
 //        String opStart = "00:55";
@@ -59,7 +59,7 @@ public class VideoPlayer {
     
     
     
-    public static String solution(String videoLen, String pos, String opStart, String opEnd, String[] commands) {
+    public String solution(String videoLen, String pos, String opStart, String opEnd, String[] commands) {
         Duration posDuration = toDuration(pos);
         Duration videoStartDuration = toDuration("00:00");
         Duration videoLenDuration = toDuration(videoLen);

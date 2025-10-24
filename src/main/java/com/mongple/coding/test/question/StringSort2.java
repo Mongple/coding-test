@@ -6,7 +6,7 @@ import java.util.stream.Collectors;
 
 public class StringSort2 {
     
-    public static void main(String[] args) {
+    void main() {
         System.out.println("solution : " + solution("Bcad"));
     }
 
@@ -22,7 +22,7 @@ public class StringSort2 {
      * 
      */
     
-    public static String solution(String myString) {
+    public String solution(String myString) {
         return Arrays.stream(myString.toLowerCase(Locale.ROOT).split(""))
                 .sorted()
                 .collect(Collectors.joining());

@@ -5,7 +5,7 @@ import java.time.LocalTime;
 
 public class FlexibleWorking {
 
-    public static void main(String[] args) {
+    void main() {
         int[] schedules = {700, 800, 1100};
         int[][] timeLogs = {
                 {710, 2359, 1050, 700, 650, 631, 659},
@@ -40,7 +40,7 @@ public class FlexibleWorking {
      * 출근 희망 시각과 실제로 출근한 시각을 100으로 나눈 나머지는 59 이하입니다.
      *
      */
-    public static int solution(int[] schedules, int[][] timeLogs, int startDay) {
+    public int solution(int[] schedules, int[][] timeLogs, int startDay) {
         LocalTime successTime;
         LocalTime diffTargetTime;
         boolean fullSuccess;

@@ -4,7 +4,7 @@ import java.util.*;
 
 public class StrangeSort {
     
-    public static void main(String[] args) {
+    void main() {
         int[] numList = {1, 2, 3, 4, 5, 6};
         int n = 4;
         
@@ -28,7 +28,7 @@ public class StrangeSort {
      * 
      */
     
-    public static int[] solution(int[] numList, int n) {
+    public int[] solution(int[] numList, int n) {
         Map<Integer, Integer> map = new HashMap<>();
         
         // key : num, value : 거리
@@ -51,7 +51,7 @@ public class StrangeSort {
         return keyList.stream().mapToInt(Integer::intValue).toArray();
     }
 
-    public static int[] solution2(int[] numList, int n) {
+    public int[] solution2(int[] numList, int n) {
         
         return Arrays.stream(numList)
                 .boxed()

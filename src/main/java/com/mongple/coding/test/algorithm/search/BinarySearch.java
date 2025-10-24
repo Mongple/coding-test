@@ -2,13 +2,13 @@ package com.mongple.coding.test.algorithm.search;
 
 public class BinarySearch {
 
-    public static void main(String[] args) {
+    void main() {
         int[] data = {4,2,3,1,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20};
         int target = 6;
         System.out.println("solution : " + solution(data, target));
     }
     
-    public static int solution(int[] data, int target) {
+    public int solution(int[] data, int target) {
         int searchStart = 0;
         int searchEnd = data.length - 1;
         int mid;

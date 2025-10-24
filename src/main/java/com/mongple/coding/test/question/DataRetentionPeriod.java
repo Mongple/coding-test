@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class DataRetentionPeriod {
     
-    public static void main(String[] args) {
+    void main() {
         String today = "2022.05.19";
         String[] terms = {"A 6", "B 12", "C 3"};
         String[] privacies = {"2021.05.02 A", "2021.07.01 B", "2022.02.19 C", "2022.02.20 C"};
@@ -68,7 +68,7 @@ public class DataRetentionPeriod {
      * 파기해야 할 개인정보가 하나 이상 존재하는 입력만 주어집니다.
      */
     
-    public static int[] solution(String today, String[] terms, String[] privacies) {
+    public int[] solution(String today, String[] terms, String[] privacies) {
 
         int dayOfDate = toCustomDay(today);
         
@@ -95,7 +95,7 @@ public class DataRetentionPeriod {
                 .toArray();
     }
 
-    public static int toCustomDay(String date) {
+    public int toCustomDay(String date) {
         String[] dateArr = date.split("\\.");
         int year = Integer.parseInt(dateArr[0]);
         int month = Integer.parseInt(dateArr[1]);
